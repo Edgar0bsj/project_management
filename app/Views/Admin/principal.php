@@ -51,12 +51,14 @@
                     </tr>
                 </tfoot>
                 <tbody>
+                    <?php foreach($usuarios as $usuario):?>
                     <tr>
-                        <td>1</td>
-                        <td>Tiger Nixon</td>
-                        <td>tiger@azmail.com</td>
-                        <td>(21) 912345678</td>
+                        <td><?= $usuario['id']?></td>
+                        <td><?= $usuario['nome']?></td>
+                        <td><?= $usuario['email']?></td>
+                        <td><?= $usuario['telefone']?></td>
                     </tr>
+                    <?php endforeach; ?>
                 </tbody>
             </table>
         </div>
@@ -76,10 +78,6 @@
 
 <!------SCRIPT------->
 <?= $this->section('script') ?>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-    crossorigin="anonymous"></script>
-<script src="<?= site_url('dashboard/js/scripts.js') ?>"></script>
 <script src="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/umd/simple-datatables.min.js"
     crossorigin="anonymous"></script>
 <script src="<?= site_url('dashboard/js') ?>/datatables-simple-demo.js"></script>
