@@ -215,3 +215,156 @@ in APPPATH\Controllers\Login.php on line 25.
  6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
  7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
  8 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Edgar\\Documents\\GitHub\\project_management\\public\\index.php')
+ERROR - 2024-09-13 15:13:02 --> mysqli_sql_exception: Unknown column 'relefone' in 'field list' in C:\Users\Edgar\Documents\GitHub\project_management\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\Users\Edgar\Documents\GitHub\project_management\system\Database\MySQLi\Connection.php(312): mysqli->query('INSERT INTO `Us...', 0)
+#1 C:\Users\Edgar\Documents\GitHub\project_management\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `Us...')
+#2 C:\Users\Edgar\Documents\GitHub\project_management\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `Us...')
+#3 C:\Users\Edgar\Documents\GitHub\project_management\system\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `Us...', Array, false)
+#4 C:\Users\Edgar\Documents\GitHub\project_management\app\Database\Seeds\UsuariosSeeds.php(18): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\Users\Edgar\Documents\GitHub\project_management\system\Database\Seeder.php(147): App\Database\Seeds\UsuariosSeeds->run()
+#6 C:\Users\Edgar\Documents\GitHub\project_management\system\Commands\Database\Seed.php(79): CodeIgniter\Database\Seeder->call('App\\Database\\Se...')
+#7 C:\Users\Edgar\Documents\GitHub\project_management\system\CLI\Commands.php(70): CodeIgniter\Commands\Database\Seed->run(Array)
+#8 C:\Users\Edgar\Documents\GitHub\project_management\system\CLI\Console.php(48): CodeIgniter\CLI\Commands->run('db:seed', Array)
+#9 C:\Users\Edgar\Documents\GitHub\project_management\system\Boot.php(351): CodeIgniter\CLI\Console->run()
+#10 C:\Users\Edgar\Documents\GitHub\project_management\system\Boot.php(104): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+#11 C:\Users\Edgar\Documents\GitHub\project_management\spark(84): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+#12 {main}
+ERROR - 2024-09-13 15:16:25 --> mysqli_sql_exception: Unknown column 'relefone' in 'field list' in C:\Users\Edgar\Documents\GitHub\project_management\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\Users\Edgar\Documents\GitHub\project_management\system\Database\MySQLi\Connection.php(312): mysqli->query('INSERT INTO `Us...', 0)
+#1 C:\Users\Edgar\Documents\GitHub\project_management\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `Us...')
+#2 C:\Users\Edgar\Documents\GitHub\project_management\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `Us...')
+#3 C:\Users\Edgar\Documents\GitHub\project_management\system\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `Us...', Array, false)
+#4 C:\Users\Edgar\Documents\GitHub\project_management\app\Database\Seeds\UsuariosSeeds.php(18): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\Users\Edgar\Documents\GitHub\project_management\system\Database\Seeder.php(147): App\Database\Seeds\UsuariosSeeds->run()
+#6 C:\Users\Edgar\Documents\GitHub\project_management\system\Commands\Database\Seed.php(79): CodeIgniter\Database\Seeder->call('App\\Database\\Se...')
+#7 C:\Users\Edgar\Documents\GitHub\project_management\system\CLI\Commands.php(70): CodeIgniter\Commands\Database\Seed->run(Array)
+#8 C:\Users\Edgar\Documents\GitHub\project_management\system\CLI\Console.php(48): CodeIgniter\CLI\Commands->run('db:seed', Array)
+#9 C:\Users\Edgar\Documents\GitHub\project_management\system\Boot.php(351): CodeIgniter\CLI\Console->run()
+#10 C:\Users\Edgar\Documents\GitHub\project_management\system\Boot.php(104): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+#11 C:\Users\Edgar\Documents\GitHub\project_management\spark(84): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+#12 {main}
+CRITICAL - 2024-09-13 15:48:47 --> ErrorException: Undefined array key "senha"
+[Method: POST, Route: autenticacao]
+in APPPATH\Controllers\Login.php on line 31.
+ 1 APPPATH\Controllers\Login.php(31): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "senha"', 'C:\\Users\\Edgar\\Documents\\GitHub\\project_management\\app\\Controllers\\Login.php', 31)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Login->verificarLogin()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Edgar\\Documents\\GitHub\\project_management\\public\\index.php')
+CRITICAL - 2024-09-13 15:49:55 --> ErrorException: Undefined array key "senha"
+[Method: POST, Route: autenticacao]
+in APPPATH\Controllers\Login.php on line 30.
+ 1 APPPATH\Controllers\Login.php(30): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "senha"', 'C:\\Users\\Edgar\\Documents\\GitHub\\project_management\\app\\Controllers\\Login.php', 30)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Login->verificarLogin()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Edgar\\Documents\\GitHub\\project_management\\public\\index.php')
+CRITICAL - 2024-09-13 15:50:02 --> ErrorException: Undefined array key "email"
+[Method: POST, Route: autenticacao]
+in APPPATH\Controllers\Login.php on line 30.
+ 1 APPPATH\Controllers\Login.php(30): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "email"', 'C:\\Users\\Edgar\\Documents\\GitHub\\project_management\\app\\Controllers\\Login.php', 30)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Login->verificarLogin()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Edgar\\Documents\\GitHub\\project_management\\public\\index.php')
+CRITICAL - 2024-09-13 15:53:51 --> ParseError: syntax error, unexpected token "}", expecting "," or ";"
+[Method: POST, Route: autenticacao]
+in APPPATH\Controllers\Login.php on line 38.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\Users\\Edgar\\Documents\\GitHub\\project_management\\app\\Controllers\\Login.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(272): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Login')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Login')
+ 4 SYSTEMPATH\CodeIgniter.php(887): class_exists('\\App\\Controllers\\Login', true)
+ 5 SYSTEMPATH\CodeIgniter.php(496): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Edgar\\Documents\\GitHub\\project_management\\public\\index.php')
+CRITICAL - 2024-09-13 15:58:43 --> ErrorException: Undefined array key 0
+[Method: POST, Route: autenticacao]
+in APPPATH\Controllers\Login.php on line 29.
+ 1 APPPATH\Controllers\Login.php(29): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 0', 'C:\\Users\\Edgar\\Documents\\GitHub\\project_management\\app\\Controllers\\Login.php', 29)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Login->verificarLogin()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Edgar\\Documents\\GitHub\\project_management\\public\\index.php')
+CRITICAL - 2024-09-13 16:00:00 --> ErrorException: Undefined array key 0
+[Method: POST, Route: autenticacao]
+in APPPATH\Controllers\Login.php on line 30.
+ 1 APPPATH\Controllers\Login.php(30): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 0', 'C:\\Users\\Edgar\\Documents\\GitHub\\project_management\\app\\Controllers\\Login.php', 30)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Login->verificarLogin()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Edgar\\Documents\\GitHub\\project_management\\public\\index.php')
+INFO - 2024-09-13 16:06:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-13 16:06:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-13 16:10:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-13 16:20:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-13 16:48:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-09-13 16:48:55 --> ValueError: strpos(): Argument #3 ($offset) must be contained in argument #1 ($haystack)
+[Method: POST, Route: autenticacao]
+in SYSTEMPATH\Validation\Validation.php on line 971.
+ 1 SYSTEMPATH\Validation\Validation.php(971): strpos('required|min_length[3]|regex_match[/^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)(?=.*[@$!%*?&', '|', 81)
+ 2 SYSTEMPATH\Validation\Validation.php(610): CodeIgniter\Validation\Validation->splitRules([...])
+ 3 SYSTEMPATH\Controller.php(181): CodeIgniter\Validation\Validation->setRules([...], [])
+ 4 SYSTEMPATH\Controller.php(135): CodeIgniter\Controller->setValidator([...], [])
+ 5 APPPATH\Controllers\Login.php(37): CodeIgniter\Controller->validate([...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Login->verificarLogin()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Edgar\\Documents\\GitHub\\project_management\\public\\index.php')
+CRITICAL - 2024-09-13 16:50:53 --> ValueError: strpos(): Argument #3 ($offset) must be contained in argument #1 ($haystack)
+[Method: POST, Route: autenticacao]
+in SYSTEMPATH\Validation\Validation.php on line 971.
+ 1 SYSTEMPATH\Validation\Validation.php(971): strpos('required|min_length[3]|regex_match[/^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)(?=.*[@$!%*?&]', '|', 82)
+ 2 SYSTEMPATH\Validation\Validation.php(610): CodeIgniter\Validation\Validation->splitRules([...])
+ 3 SYSTEMPATH\Controller.php(181): CodeIgniter\Validation\Validation->setRules([...], [])
+ 4 SYSTEMPATH\Controller.php(135): CodeIgniter\Controller->setValidator([...], [])
+ 5 APPPATH\Controllers\Login.php(37): CodeIgniter\Controller->validate([...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Login->verificarLogin()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Edgar\\Documents\\GitHub\\project_management\\public\\index.php')
+INFO - 2024-09-13 16:51:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-09-13 16:51:14 --> ValueError: strpos(): Argument #3 ($offset) must be contained in argument #1 ($haystack)
+[Method: POST, Route: autenticacao]
+in SYSTEMPATH\Validation\Validation.php on line 971.
+ 1 SYSTEMPATH\Validation\Validation.php(971): strpos('required|min_length[3]|regex_match[/^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)(?=.*[@$!%*?&]', '|', 82)
+ 2 SYSTEMPATH\Validation\Validation.php(610): CodeIgniter\Validation\Validation->splitRules([...])
+ 3 SYSTEMPATH\Controller.php(181): CodeIgniter\Validation\Validation->setRules([...], [])
+ 4 SYSTEMPATH\Controller.php(135): CodeIgniter\Controller->setValidator([...], [])
+ 5 APPPATH\Controllers\Login.php(37): CodeIgniter\Controller->validate([...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Login->verificarLogin()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Edgar\\Documents\\GitHub\\project_management\\public\\index.php')
+INFO - 2024-09-13 16:51:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-13 16:52:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-13 16:52:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-13 16:52:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

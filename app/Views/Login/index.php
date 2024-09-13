@@ -159,6 +159,12 @@
     <!-- <img class="mb-4" src="#" alt="" width="72" height="57"> -->
     <h1 class="h3 mb-3 fw-normal">Login</h1>
 
+    <?php if(!empty($erro)):?>
+      <div class="alert alert-denger">
+        <?= "<b> $erro </b>" ?>
+    </div>
+      <?php endif ?>
+
     <div class="form-floating">
       <input name="email" type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
       <label for="floatingInput">Email</label>
