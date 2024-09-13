@@ -6,10 +6,13 @@ use App\Models\UsuariosModel;
 class Login extends BaseController
 {
     private $userModel;
+    private $session;
+
     // -----------------------------------------------
     public function __construct()
     {
         $this->userModel = new UsuariosModel();
+        $this->session = \Config\Services::session();
     }
 
     // -----------------------------------------------
@@ -28,20 +31,37 @@ class Login extends BaseController
 
         // --verificando se existe no banco de dados-----------------
 
-        $usuario = $this->userModel->where(['email' => $email])->find();
+        $usuarioInfo = $this->userModel->where(['email' => $email])->find();
 
-        if (!empty($usuario)) {
-            $verificEmail = $usuario[0]['email'] === $email ?? true;
-            $verificSenha = $usuario[0]['senha'] === md5($senha) ?? true;
+        if (!empty($usuarioInfo)) {
+            $verificEmail = $usuarioInfo[0]['email'] === $email ?? true;
+            $verificSenha = $usuarioInfo[0]['senha'] === md5($senha) ?? true;
 
             if ($verificEmail && $verificSenha) {
+
+                $sessionDados = [
+                    'nome' => $usuarioInfo[0]['nome'],
+                    'status' => true
+                ];
+
+                $this->session->set($sessionDados);
+
                 return redirect()->route('Dashboard');
+            }else {
+                return view('Login/index', ['erro' => 'Senha Inválidos']);
             }
         } else {
 
             // ---------------validando dados-----------------
-            return view('Login/index',['erro'=>'Senha ou Email Inválidos']);
+            return view('Login/index', ['erro' => 'Senha ou Email Inválidos']);
         }
+
+    }
+
+    public function logout(){
+
+        $this->session->destroy();
+        return redirect()->route('login');
 
     }
 

@@ -11,4 +11,5 @@ $routes->get('/', 'Admin::dashboard',['as'=>'Dashboard']);
 // --------------------------------------------------------
 $routes->get('login', 'Login::index',['as'=>'login']);
 $routes->post('autenticacao', 'Login::verificarLogin',['as'=>'autenticacao']);
+$routes->get('logout', 'Login::logout',['as'=>'logout']);
 // --------------------------------------------------------
